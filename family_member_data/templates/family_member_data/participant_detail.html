@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participant {{ participant_id }}</title>
+</head>
+<body>
+    {% if participant %}
+        <ul>
+            <li>Name: {{ participant.name }}</li>
+            <li>Age: {{ participant.age }}</li>
+            <li>Requests: {{ participant.requests }}</li>
+        </ul>
+    {% endif %}
+</body>
+</html>

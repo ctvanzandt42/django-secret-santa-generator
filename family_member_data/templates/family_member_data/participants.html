@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participants</title>
+</head>
+<body>
+    {% if participant_list %}
+        <ul>
+        {% for participant in participant_list %}
+            <li>{{ participant }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No family members have signed up</p>
+    {% endif %}
+</body>
+</html>
