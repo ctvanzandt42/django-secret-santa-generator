@@ -16,13 +16,13 @@ import yaml
 with open("config.yml", "r") as ymlfile:
     CONFIG = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
-DATABASE_ENGINE = CONFIG['engine']
-DATABASE_NAME = CONFIG['database']
-DATABASE_USER = CONFIG['user']
-DATABASE_PASSWORD = CONFIG['password']
-DATABASE_HOST = CONFIG['host']
-DATABASE_PORT = CONFIG['port']
-SECRET = CONFIG['secret']
+DATABASE_ENGINE = CONFIG['database']['engine']
+DATABASE_NAME = CONFIG['database']['database_name']
+DATABASE_USER = CONFIG['database']['user']
+DATABASE_PASSWORD = CONFIG['database']['password']
+DATABASE_HOST = CONFIG['database']['host']
+DATABASE_PORT = CONFIG['database']['port']
+SECRET = CONFIG['django_configuration']['secret']
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

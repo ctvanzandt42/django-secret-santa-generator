@@ -26,13 +26,16 @@ This project loads sensitive information from a YAML file stored in the root of 
 `secret_santa_generator/settings.py` on line 16. You'll need to create `config.yml` at the root level. The contents of this file
 are: <br><br>
 
-```database: <your database name>
-user: <user>
-password: <password>
-host: <database host>
-port: <database port>
-engine: <database engine>
-secret: <secret key> 
+```
+database:
+    database_name: <your database name>
+    user: <user>
+    password: <password>
+    host: <database host>
+    port: <database port>
+    engine: <database engine>
+django_configuration:
+    secret: <secret key> 
 ``` 
 
 <br>You should notice `(secret_santa_env)` prefixed on your command line at this point. This indicates that the environment is running. 
