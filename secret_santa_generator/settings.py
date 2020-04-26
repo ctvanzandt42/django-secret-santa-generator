@@ -11,18 +11,14 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import yaml
 
-with open("config.yml", "r") as ymlfile:
-    CONFIG = yaml.load(ymlfile, Loader=yaml.FullLoader)
-
-DATABASE_ENGINE = CONFIG['database']['engine']
-DATABASE_NAME = CONFIG['database']['database_name']
-DATABASE_USER = CONFIG['database']['user']
-DATABASE_PASSWORD = CONFIG['database']['password']
-DATABASE_HOST = CONFIG['database']['host']
-DATABASE_PORT = CONFIG['database']['port']
-SECRET = CONFIG['django_configuration']['secret']
+DATABASE_ENGINE = os.environ.get('DATABASE_ENGINE')
+DATABASE_NAME = os.environ.get('DATABASE_NAME')
+DATABASE_USER = os.environ.get('DATABASE_USER')
+DATABASE_PASSWORD = os.environ.get('DATABASE_PASSWORD')
+DATABASE_HOST = os.environ.get('DATABASE_HOST')
+DATABASE_PORT = os.environ.get('DATABASE_PORT')
+SECRET = os.environ.get('SECRET_KEY')
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

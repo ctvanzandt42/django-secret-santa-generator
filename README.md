@@ -8,6 +8,7 @@ how to use Django for a while now, so this was an opportunity to step outside my
   <li>Django</li> 
   <li>PostgreSQL</li>
   <li>VirtualEnv</li>
+  <li>Github Actions</li>
 
 <h2>Run Book</h2>
 
@@ -22,23 +23,7 @@ Next, you'll navigate to the root of the project if you haven't already and spin
 
 `source secret_santa_env/bin/activate` <br><br>
 
-This project loads sensitive information from a YAML file stored in the root of the project. This configuration can be found in 
-`secret_santa_generator/settings.py` on line 16. You'll need to create `config.yml` at the root level. The contents of this file
-are: <br><br>
-
-```
-database:
-    database_name: <your database name>
-    user: <user>
-    password: <password>
-    host: <database host>
-    port: <database port>
-    engine: <database engine>
-django_configuration:
-    secret: <secret key> 
-``` 
-
-<br>You should notice `(secret_santa_env)` prefixed on your command line at this point. This indicates that the environment is running. 
+You should notice `(secret_santa_env)` prefixed on your command line at this point. This indicates that the environment is running. 
 Finally, you'll need to install the modules within this local environment. You can do this with this command: <br><br>
 
 `pip install -r requirements.txt` <br><br>
