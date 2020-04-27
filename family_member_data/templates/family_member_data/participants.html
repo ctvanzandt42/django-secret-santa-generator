@@ -8,7 +8,7 @@
     {% if participant_list %}
         <ul>
         {% for participant in participant_list %}
-            <li>{{ participant }}</li>
+            <li><a href="participants/{{participant.id}}">{{ participant }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
