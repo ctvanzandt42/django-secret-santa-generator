@@ -36,6 +36,3 @@ jobs:
         DATABASE_ENGINE: django.db.backends.postgresql
       run: |
         python manage.py test
-    - name: Linting
-      run: |
-        pylint secret_santa_generator family_member_data
